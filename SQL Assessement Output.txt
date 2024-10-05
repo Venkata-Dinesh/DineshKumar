@@ -124,4 +124,70 @@ empId       firstname       lastname        dept       salary      hiredate     
           7 David           Andreson        IT               65000 2019-06-25      true           
           8 Jennifer        Lee             Finance          68000 2017-02-18      true           
           9 Robert          Clark           HR               55000 2018-12-05      true           
+         11 Dines           Koppolu         HR               55000 2024-08-7       true  
+
+(11)
+mpId       firstname       lastname        dept       salary      hiredate        active         
+----------- --------------- --------------- ---------- ----------- --------------- ---------------
+          3 Michal          Brown           Finance          70000 2018-07-20      true  
+
+(12)
+empId       firstname       lastname        dept       salary      hiredate        active         
+----------- --------------- --------------- ---------- ----------- --------------- ---------------
+          1 John            Doe             HR               55000 2020-01-15      true           
+          2 Jane            Smit            IT               60000 2019-03-10      true           
+          5 James           Wilson          HR               55000 2021-09-12      true           
+          9 Robert          Clark           HR               55000 2018-12-05      true           
+         11 Dines           Koppolu         HR               55000 2024-08-7       true    
+
+(13)
+empId       firstname       lastname        dept       salary      hiredate        active         
+----------- --------------- --------------- ---------- ----------- --------------- ---------------
+          1 John            Doe             HR               55000 2020-01-15      true           
+          2 Jane            Smit            IT               60000 2019-03-10      true           
+          5 James           Wilson          HR               55000 2021-09-12      true           
+          7 David           Andreson        IT               65000 2019-06-25      true           
+          9 Robert          Clark           HR               55000 2018-12-05      true           
          11 Dines           Koppolu         HR               55000 2024-08-7       true           
+
+(14)
+dept       EmployeeCount
+---------- -------------
+Finance                2
+HR                     4
+IT                     2
+
+(15)
+TotalSalary
+-----------
+     220000
+
+(16)
+AverageSalary
+-------------
+         NULL
+
+(17)
+MinSalary   MaxSalary  
+----------- -----------
+      60000       65000
+
+(18)
+empId       firstname       lastname        dept       salary      hiredate        active          DepartmentID deptName                                          
+----------- --------------- --------------- ---------- ----------- --------------- --------------- ------------ --------------------------------------------------
+          1 John            Doe             HR               55000 2020-01-15      true                       1 HR                                                
+          2 Jane            Smit            IT               60000 2019-03-10      true                       2 IT                                                
+          3 Michal          Brown           Finance          70000 2018-07-20      true                       3 Finance                                           
+          5 James           Wilson          HR               55000 2021-09-12      true                       1 HR                                                
+          7 David           Andreson        IT               65000 2019-06-25      true                       2 IT                                                
+          8 Jennifer        Lee             Finance          68000 2017-02-18      true                       3 Finance                                           
+          9 Robert          Clark           HR               55000 2018-12-05      true                       1 HR                                                
+         11 Dines           Koppolu         HR               55000 2024-08-7       true                       1 HR                                                
+
+(19)
+empId       firstname       lastname        dept       salary      hiredate        active          DepartmentID
+----------- --------------- --------------- ---------- ----------- --------------- --------------- ------------
+          2 Jane            Smit            IT               60000 2019-03-10      true                       2
+          3 Michal          Brown           Finance          70000 2018-07-20      true                       3
+          7 David           Andreson        IT               65000 2019-06-25      true                       2
+          8 Jennifer        Lee             Finance          68000 2017-02-18      true                       3
