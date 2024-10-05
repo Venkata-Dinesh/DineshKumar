@@ -41,9 +41,45 @@ SELECT * FROM EMP WHERE not dept = 'IT';
 INSERT INTO EMP(empId,firstname,lastname,dept,salary,hiredate,active) VALUES(11,'Dines','Koppolu','HR',68000,'2024-08-7','true');
 SELECT * FROM EMP;
 
-
 update EMP SET salary = 55000 WHERE dept = 'HR';
 SELECT * FROM EMP;
 
 delete FROM EMP WHERE active = 'false';
 SELECT * FROM EMP;
+
+SELECT * FROM EMP WHERE FirstName LIKE 'M%';
+
+SELECT * FROM EMP WHERE Salary BETWEEN 45000 AND 60000;
+
+SELECT * FROM EMP WHERE dept IN ('HR', 'IT');
+
+SELECT dept, COUNT(*) AS EmployeeCount FROM EMP GROUP BY dept;
+
+SELECT SUM(Salary) AS TotalSalary FROM EMP WHERE dept = 'HR';
+
+SELECT AVG(Salary) AS AverageSalary FROM EMP WHERE Active = 'false';
+
+SELECT MIN(Salary) AS MinSalary, MAX(Salary) AS MaxSalary FROM EMP WHERE dept = 'IT';
+
+
+CREATE TABLE Departments (
+  DepartmentID int,
+  deptName varchar(50)
+);
+
+INSERT INTO Departments (DepartmentID, deptName) VALUES (1, 'HR');
+INSERT INTO Departments (DepartmentID, deptName) VALUES (2, 'IT');
+INSERT INTO Departments (DepartmentID, deptName) VALUES (3, 'Finance');
+
+ALTER TABLE EMP ADD DepartmentID int;
+
+UPDATE EMP SET DepartmentID = 1 WHERE dept = 'HR';
+UPDATE EMP SET DepartmentID = 2 WHERE dept = 'IT';
+UPDATE EMP SET DepartmentID = 3 WHERE dept = 'Finance';
+
+SELECT E.*, D.deptName 
+FROM EMP E 
+JOIN Departments D ON E.DepartmentID = D.DepartmentID;
+
+SELECT * FROM EMP WHERE Salary > (SELECT AVG(Salary) FROM EMP WHERE dept = 'HR');
+
